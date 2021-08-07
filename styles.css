@@ -1,0 +1,15 @@
+.parent {
+  text-align: center;
+}
+
+.cashContainer {
+  display: none;
+}
+
+.returnCashContainer {
+  display: none;
+}
+
+.warningMessage {
+  display: none;
+}
