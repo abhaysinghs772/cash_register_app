@@ -1,7 +1,90 @@
-.parent {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.cashContainer, .returnCashContainer, .billWarningMessage, .cashWarningMessage {
+:root {
+  --light-blue: #93c5fd;
+  --dark-blue: #1e40af;
+}
+
+/* toggle */
+.cashContainer,
+.returnCashContainer,
+.billWarningMessage,
+.cashWarningMessage {
   display: none;
+}
+
+/* Heading Section  */
+.parent {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  max-width: 500px;
+  min-height: 200px;
+  margin: auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: var(--light-blue);
+}
+
+h2,
+p {
+  color: black;
+}
+
+/* Rest Section */
+.billContainer {
+  width: 100%;
+}
+
+.sub-heading {
+  font-size: 1.3rem;
+  padding: 1.5rem 1rem 0 0.5rem;
+}
+
+input {
+  width: 93%;
+  padding: 1rem;
+  height: 20px;
+  display: block;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  display: block;
+  font-size: 1rem;
+  border: none;
+  margin: 1rem auto 0;
+  background-color: var(--dark-blue);
+  color: white;
+  font-weight: bold;
+}
+
+.errMsz {
+  color: red;
+}
+
+/* output table Section*/
+.output {
+  margin: 1rem 0;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.output table,
+th,
+td {
+  padding: 0.2rem;
+  color: black;
+  border: 2px solid var(--dark-blue);
+  border-collapse: collapse;
+}
+
+.no_Of_Notes {
+  background-color: white;
+  font-weight: bold;
 }

@@ -12,48 +12,56 @@
   </head>
   <body>
     <div class="parent">
-      <h2>Cash Registerr App</h2>
+      <!-- Heading Section -->
+      <h2 class="main-heading">Cash Registerr App</h2>
       <p>
         Enter the bill amount and cash given by the customer and know minimum
         number of notes to return.
       </p>
+
+      <!-- Bill Amount Section -->
       <div class="billContainer">
-        <h2>Bill Amount:</h2>
-        <input class="billAmount" type="text" name="bill_Amount" value="" />
-        <button class="next" type="button">Next</button>
-        <p class="billWarningMessage">please enter bill amount to be payed !</p>
+        <h2 class="sub-heading" >Bill Amount:</h2>
+        <input class="billAmount input-section" type="text" name="bill_Amount" value="" />
+        <button class="next click-me" type="button">Next</button>
+        <p class="billWarningMessage errMsz">please enter bill amount to be payed !</p>
       </div>
 
+      <!-- Cash Amount Section -->
       <div class="cashContainer">
-          <h2>Cash Given:</h2>
-          <input class="cashAmount" type="text" name="cashGiven" value="" />
-          <button class="check" type="button">Check</button>
-          <p class="cashWarningMessage">please enter cash amount which is payed !</p>
+          <h2 class="sub-heading">Cash Given:</h2>
+          <input class="cashAmount input-section" type="text" name="cashGiven" value="" />
+          <button class="check click-me" type="button">Check</button>
+          <p class="cashWarningMessage errMsz">please enter cash amount which is payed !</p>
       </div>
 
+      <!-- Changes Section -->
       <div class="returnCashContainer">
-        <table class="changeToBeReturn">
-          <tr>
-            <th>No. of Notes</th>
-            <td class="no_Of_Notes"></td>
-            <td class="no_Of_Notes"></td>
-            <td class="no_Of_Notes"></td>
-            <td class="no_Of_Notes"></td>
-            <td class="no_Of_Notes"></td>
-            <td class="no_Of_Notes"></td>
-            <td class="no_Of_Notes"></td>
-          </tr>
-          <tr>
-            <th>Note</th>
-            <td>2000</td>
-            <td>500</td>
-            <td>100</td>
-            <td>20</td>
-            <td>10</td>
-            <td>5</td>
-            <td>1</td>
-          </tr>
-        </table>
+        <h2 class="sub-heading" >Return Change</h2>
+        <div class="output">
+          <table class="changeToBeReturn">
+            <tr>
+              <th>No. of Notes</th>
+              <td class="no_Of_Notes"></td>
+              <td class="no_Of_Notes"></td>
+              <td class="no_Of_Notes"></td>
+              <td class="no_Of_Notes"></td>
+              <td class="no_Of_Notes"></td>
+              <td class="no_Of_Notes"></td>
+              <td class="no_Of_Notes"></td>
+            </tr>
+            <tr>
+              <th>Note</th>
+              <td>2000</td>
+              <td>500</td>
+              <td>100</td>
+              <td>20</td>
+              <td>10</td>
+              <td>5</td>
+              <td>1</td>
+            </tr>
+          </table>
+        </div>
       </div>
       </div>
     </div>
