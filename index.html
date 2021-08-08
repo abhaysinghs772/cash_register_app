@@ -21,17 +21,40 @@
         <h2>Bill Amount:</h2>
         <input class="billAmount" type="text" name="bill_Amount" value="" />
         <button class="next" type="button">Next</button>
-        <p class="warningMessage">please enter bill amount to be payed !</p>
+        <p class="billWarningMessage">please enter bill amount to be payed !</p>
       </div>
 
       <div class="cashContainer">
           <h2>Cash Given:</h2>
           <input class="cashAmount" type="text" name="cashGiven" value="" />
           <button class="check" type="button">Check</button>
+          <p class="cashWarningMessage">please enter cash amount which is payed !</p>
       </div>
 
       <div class="returnCashContainer">
-          <h2>Return Change:</h2>
+        <table class="changeToBeReturn">
+          <tr>
+            <th>No. of Notes</th>
+            <td class="no_Of_Notes"></td>
+            <td class="no_Of_Notes"></td>
+            <td class="no_Of_Notes"></td>
+            <td class="no_Of_Notes"></td>
+            <td class="no_Of_Notes"></td>
+            <td class="no_Of_Notes"></td>
+            <td class="no_Of_Notes"></td>
+          </tr>
+          <tr>
+            <th>Note</th>
+            <td>2000</td>
+            <td>500</td>
+            <td>100</td>
+            <td>20</td>
+            <td>10</td>
+            <td>5</td>
+            <td>1</td>
+          </tr>
+        </table>
+      </div>
       </div>
     </div>
     <script src="/app.js" defer></script>

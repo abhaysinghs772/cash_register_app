@@ -2,14 +2,6 @@
   text-align: center;
 }
 
-.cashContainer {
-  display: none;
-}
-
-.returnCashContainer {
-  display: none;
-}
-
-.warningMessage {
+.cashContainer, .returnCashContainer, .billWarningMessage, .cashWarningMessage {
   display: none;
 }
