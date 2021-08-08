@@ -10,15 +10,12 @@ const returnCashContainer = document.querySelector('.returnCashContainer');
 const billWarningMessage = document.querySelector('.billWarningMessage');
 const cashWarningMessage = document.querySelector('.cashWarningMessage');
 const no_Of_Notes = document.querySelectorAll('.no_Of_Notes')
-let billAmountVal;
-let cashGivenVal;
+let message;
 
 nextBtn.addEventListener('click', () => {
-    // console.log(billAmount.value);
-    billAmountVal = billAmount.value;
 
     // billAmountVal is a string type
-    if (billAmountVal.length != 0) {
+    if ( Number(billAmount.value) > 0) {
 
         // if input field is not empty then hiding the warning message
         billWarningMessage.style.display = 'none';
@@ -26,24 +23,33 @@ nextBtn.addEventListener('click', () => {
         cashContainer.style.display = 'block';
 
         checkBtn.addEventListener('click', () => {
-        
-            cashGivenVal = cashGiven.value;
-            if (cashGivenVal.length != 0) {
+
+            if (Number(cashGiven.value) >= Number(billAmount.value)) {
                 // if input field is not empty then hiding the warning message
-                cashWarningMessage.style.display = 'none';
+                hideErrMsz(cashWarningMessage);
                 // showing result 
                 returnCashContainer.style.display = 'block';
                 returnCash(billAmount.value, cashGiven.value);
-
             } else {
-                cashWarningMessage.style.display = 'block';
+                message = `Cash is less then bill Amount, please enter valid Cash Amount!`;
+                showErrMsz(cashWarningMessage, message);
+                returnCashContainer.style.display = 'none';
             }
         });
-        console.log(billAmount.value);
     } else {
-        billWarningMessage.style.display = 'block';
+        message = `bill amount must be greater then 0`;
+        showErrMsz(billWarningMessage, message)
     }
 });
+
+function showErrMsz(selector, msz){
+    selector.style.display = 'block';
+    selector.innerText = msz;
+}
+
+function hideErrMsz(selector){
+    selector.style.display = 'none';
+}
 
 function returnCash(bill, cash) {
     let change = cash - bill;
